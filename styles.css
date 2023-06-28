@@ -37,6 +37,7 @@ body {
     margin: 0 0 2% 0;
     font-weight: 700;
     color: hsl(186, 14%, 43%);
+    align-self: center;
   }
 
   .bill-container {
@@ -152,6 +153,29 @@ body {
     border-radius: 7px;
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+  }
+
+  .grayed {
+    opacity: 20%;
+  }
+
+  .error-msg-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .error-msg {
+    color: tomato;
+    justify-self: right;
+    font-size: 0.75rem;
+  }
+
+  .error-input {
+    border: solid 3px tomato;
+  }
+
+  #custom-error-msg {
+    text-align: right;
   }
 }
 
