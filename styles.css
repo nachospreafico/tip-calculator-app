@@ -1,0 +1,352 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  margin: 0;
+  background-color: hsl(185, 41%, 84%);
+  font-family: SpaceMono;
+}
+
+@font-face {
+  font-family: SpaceMono;
+  src: url("./assets/fonts/SpaceMono-Regular.ttf");
+}
+
+@media only screen and (max-width: 426px) {
+  .app-container {
+    background-color: white;
+    padding: 7%;
+    border-radius: 25px;
+  }
+
+  .logo-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 10% 0 10% 0;
+  }
+
+  .container-title {
+    margin: 0 0 2% 0;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+  }
+
+  .bill-container {
+    margin-bottom: 5%;
+  }
+
+  .input-container {
+    background-color: hsl(189, 41%, 97%);
+    padding: 3%;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+  }
+
+  .icon-dollar,
+  .icon-person {
+    justify-self: center;
+    align-self: center;
+  }
+
+  #bill-value,
+  #people-qty {
+    background-color: transparent;
+    border: 0;
+    font-size: 24px;
+    font-family: SpaceMono;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+  }
+
+  input::placeholder {
+    text-align: center;
+    font-size: 24px;
+    font-family: SpaceMono;
+    font-weight: 700;
+  }
+
+  .tip-controls {
+    margin-bottom: 5%;
+  }
+
+  .tip-qty-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .tip-option,
+  .custom-tip {
+    margin: 5%;
+    border: 0;
+    border-radius: 7px;
+    font-family: SpaceMono;
+  }
+
+  .tip-option {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 24px;
+  }
+
+  .custom-tip {
+    background-color: hsl(189, 41%, 97%);
+  }
+
+  .people-qty-container {
+    margin-bottom: 5%;
+  }
+
+  .result-container {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 25px;
+    padding: 7%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .tip-person,
+  .total-person {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+
+  .result-label {
+    color: white;
+    font-weight: 700;
+  }
+
+  .result-label span {
+    color: hsl(185, 41%, 84%);
+    font-size: 0.75rem;
+  }
+
+  .tip-person-value {
+    align-self: center;
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    justify-self: right;
+  }
+
+  .reset-btn {
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    height: 80%;
+    font-family: SpaceMono;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 7px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .app-container {
+    background-color: white;
+    padding: 2%;
+    border-radius: 25px;
+    width: 100vh;
+    height: 50vh;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 0.55fr 0.45fr;
+    grid-template-rows: 0.25fr 0.5fr 0.25fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bill-container result-container"
+      "tip-controls result-container"
+      "people-qty-container result-container";
+    column-gap: 20px;
+  }
+
+  .logo-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 5% 0 5% 0;
+  }
+
+  .container-title {
+    margin: 0 0 2% 0;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    align-self: center;
+  }
+
+  .bill-container {
+    margin-bottom: 3%;
+    grid-area: bill-container;
+  }
+
+  .input-container {
+    background-color: hsl(189, 41%, 97%);
+    padding: 1%;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+  }
+
+  .input-container:hover {
+    border: 3px solid hsl(172, 67%, 45%);
+  }
+
+  .icon-dollar,
+  .icon-person {
+    justify-self: center;
+    align-self: center;
+  }
+
+  #bill-value,
+  #people-qty {
+    background-color: transparent;
+    border: 0;
+    font-size: 24px;
+    font-family: SpaceMono;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+  }
+
+  input::placeholder {
+    text-align: center;
+    font-size: 24px;
+    font-family: SpaceMono;
+    font-weight: 700;
+  }
+
+  .tip-controls {
+    margin-bottom: 2%;
+    grid-area: tip-controls;
+  }
+
+  .tip-qty-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .tip-option,
+  .custom-tip {
+    margin: 2%;
+    border: 0;
+    border-radius: 7px;
+    font-family: SpaceMono;
+  }
+
+  .tip-option {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 24px;
+  }
+
+  .tip-option:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+  }
+
+  .custom-tip {
+    background-color: hsl(189, 41%, 97%);
+  }
+
+  .custom-tip:hover {
+    border: 3px solid hsl(172, 67%, 45%);
+  }
+
+  .people-qty-container {
+    margin-bottom: 3%;
+    grid-area: people-qty-container;
+  }
+
+  .result-container {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 25px;
+    padding: 7%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-area: result-container;
+  }
+
+  .tip-person,
+  .total-person {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+
+  .result-label {
+    color: white;
+    font-weight: 700;
+  }
+
+  .result-label span {
+    color: hsl(185, 41%, 84%);
+    font-size: 0.75rem;
+  }
+
+  .tip-person-value {
+    align-self: center;
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    justify-self: right;
+  }
+
+  .reset-btn {
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    height: 65%;
+    font-family: SpaceMono;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 7px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+  }
+
+  .reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+  }
+
+  .grayed {
+    opacity: 20%;
+  }
+
+  .error-msg-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .error-msg {
+    color: tomato;
+    justify-self: right;
+  }
+
+  .error-input {
+    border: solid 3px tomato;
+  }
+
+  #custom-error-msg {
+    text-align: right;
+  }
+}
